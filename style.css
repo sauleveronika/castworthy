@@ -22,7 +22,6 @@ a{
 #landing h3{
     animation-name: fade_in_h3;
     animation-duration: 4s;
-
 }
 /*animation for the landing page 'Castworthy' link */
 #landing a::after{
@@ -37,7 +36,6 @@ a{
     transform: translateX(-20px);
     color: rgb(243, 239, 239);
 }
-
 /*transition to the next section/page */
 .container {
     width: 100%;
@@ -61,11 +59,9 @@ a{
     color: white;
     }
 /*****/
-
 main{
     overflow-y: scroll;
   }
-
 h1{    
     font-family: "Abel", sans-serif;
     width: 99%; /*so that there wouldn't be a x axes scroll*/
@@ -73,49 +69,41 @@ h1{
     font-size: 3rem;
     text-shadow: 1px -1px 10px rgb(119, 115, 115);
 }
-
 .card{
     display: grid;
     grid-template-columns: 377px 901px;
     grid-template-rows: 450px;
-    max-width: 1278px;
+    width: 1278px;
     background: linear-gradient(180deg, rgba(238,226,223,0.8) 45%, rgba(255,247,239,0) 100%);
     color: #2F211E;
     transition: all 0.5s;
-    margin-bottom: 40px;;
+    margin-bottom: 40px;    
+    padding-top: 40px;
 }
 .card:hover{
     transform: scale(1.15);
-    
 }
 .podcast-img{
-    max-width: 274px;
+    width: 274px;
     grid-column: 1;
-    padding: 40px;
     transition: transform 0.5s;
+    padding-left: 40px;
 }
 .podcast-img:hover{
     transform: scale(1.1);
 }
-
 article{
     grid-column: 2;
-    margin-top: 40px;
 }
-
 h2:hover, li:hover{
     color:#8a6862;
-    
 }
-
 h4, h2, h5{
     margin:0px;
 }
 figcaption{
     font-weight: bold;
-
 }
-
 .icon{
     width: 35px;
     padding-right: 10px;
@@ -124,7 +112,6 @@ figcaption{
 .icon:hover{
     transform: scale(1.25);
 }
-
 #up{
     font-size: 400%;
     transition: transform 0.5s;
@@ -134,7 +121,6 @@ figcaption{
 #up:hover{
     transform: scale(1.5);
 }
-
 h1{
     transition: transform 0.5s;
 }
@@ -147,19 +133,57 @@ h1:hover::before{
     color:rgba(238, 238, 238, 1);
 }
 h1:hover{
-    transform: translateX(20px)
+    transform: translateX(20px);
 }
-
 @keyframes fade_in_a {
     0% {color:rgba(179,106,94,0);}
     100% {color:  #EEEEEE;}   
   }
-
 @keyframes fade_in_h3 {
     0% {color:rgba(179,106,94,0);}
     30% {color:rgba(179,106,94,0);}
     100% {color:  #EEEEEE;}   
 }
-
-
-  
+@media screen and (max-width: 1278px) {
+    .card{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 90%;
+        padding: 2%;
+    }
+    .podcast-img{
+        width: 90%;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #landing a{    
+        font-size: 5em;
+        margin-top: 50%;
+    }
+    #landing a:hover{
+        transform: translateX(-10px);
+    }
+    .card{
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+    }
+    .card:hover{
+        transform: scale(1);        
+    }
+    .podcast-img{
+        padding-top: 10px;
+        width: 70%;
+    }
+    .card a{
+        text-align: center;
+    }
+    .podcast-img:hover{
+        transform: scale(1);
+    }
+    article{
+        grid-column: 1;
+        grid-row: 2;
+    } 
+}
