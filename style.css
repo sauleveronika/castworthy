@@ -78,7 +78,7 @@ h1{
     display: grid;
     grid-template-columns: 377px 901px;
     grid-template-rows: 450px;
-    width: 1278px;
+    max-width: 1278px;
     background: linear-gradient(180deg, rgba(238,226,223,0.8) 45%, rgba(255,247,239,0) 100%);
     color: #2F211E;
     transition: all 0.5s;
@@ -89,7 +89,7 @@ h1{
     
 }
 .podcast-img{
-    width: 274px;
+    max-width: 274px;
     grid-column: 1;
     padding: 40px;
     transition: transform 0.5s;
